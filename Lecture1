@@ -1,0 +1,65 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Class declaration
+class Animal {
+private:
+    string name;
+    int age;
+    
+public:
+    // Constructor
+    Animal(string n, int a) {
+        name = n;
+        age = a;
+    }
+    
+    // Member functions
+    void setName(string n) {
+        name = n;
+    }
+    
+    void setAge(int a) {
+        age = a;
+    }
+    
+    string getName() {
+        return name;
+    }
+    
+    int getAge() {
+        return age;
+    }
+    
+    void displayInfo() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+    }
+};
+
+int main() {
+    // Creating objects
+    Animal dog("Buddy", 5);
+    Animal cat("Whiskers", 3);
+    
+    // Accessing members
+    cout << "Dog's Name: " << dog.getName() << endl;
+    cout << "Dog's Age: " << dog.getAge() << endl;
+    cout << "Cat's Name: " << cat.getName() << endl;
+    cout << "Cat's Age: " << cat.getAge() << endl;
+    
+    // Modifying members
+    dog.setName("Max");
+    dog.setAge(6);
+    
+    // Displaying modified information
+    cout << "Modified Dog's Name: " << dog.getName() << endl;
+    cout << "Modified Dog's Age: " << dog.getAge() << endl;
+    
+    // Using member function to display information
+    cat.displayInfo();
+    
+    return 0;
+}
